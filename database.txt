@@ -1,0 +1,11 @@
+In this case i use e-health data with objective of monitoring vital signals
+
+The database of first experiment can be founded in:
+https://physionet.org/content/sleep-accel/1.0.0/
+This is a dataset whit measure of a Apple Watch for a University to people sleeping	
+
+I use, in first time, only preassure of individual
+
+Some data can be founded in here too:
+https://outbox.eait.uq.edu.au/uqdliu3/uqvitalsignsdataset/index.html
+This case figures patients underwent anaesthesia at the Royal Adelaide Hospital.

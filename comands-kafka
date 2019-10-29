@@ -1,0 +1,46 @@
+Linux - Summary
+In summary, for Linux (ex: Ubuntu)
+
+    Download and Setup Java 8 JDK:
+
+        sudo apt install openjdk-8-jdk
+
+    Download & Extract the Kafka binaries from https://kafka.apache.org/downloads
+
+    Try Kafka commands using bin/kafka-topics.sh (for example)
+
+    Edit PATH to include Kafka (in ~/.bashrc for example) PATH="$PATH:/your/path/to/your/kafka/bin"
+
+    Edit Zookeeper & Kafka configs using a text editor
+
+        zookeeper.properties: dataDir=/your/path/to/data/zookeeper
+
+        server.properties: log.dirs=/your/path/to/data/kafka 
+
+    Start Zookeeper in one terminal window: zookeeper-server-start.sh config/zookeeper.properties
+
+    Start Kafka in another terminal window: kafka-server-start.sh config/server.properties
+
+--from-beginning
+
+kafka-topics.sh
+
+Create a topic: kafka-topics.sh --zookeeper 127.0.0.1:2181 --topic first_topic --create --partitions 3 --replication-factor 1
+
+List topics: kafka-topics.sh --zookeeper 127.0.0.1:2181 --list
+
+Describe topic: kafka-topics.sh --zookeeper 127.0.0.1:2181 --topic first_topic --describe
+
+Delete topic: kafka-topics.sh --zookeeper 127.0.0.1:2181 --topic seccond_topic --delete
+
+Create a producer: kafka-console-producer.sh --broker-list 127.0.0.1:9092 --topic first_topic
+
+Create a consumer: kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic first_topic
+
+Create a consumer-group: kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic first_topic --group my_application
+
+List a consumer-group: kafka-consumer-groups.sh --bootstrap-server localhost:9092 --list
+
+Describe a consumer-group: kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group my_aplication
+
+Restart offset-topic: kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group my_application --reset-offsets --to-earliest --execute --topic fist-topic
