@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lucas.owlapi.ontology</groupId>
+    <artifactId>ontologyJobs</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/net.sourceforge.owlapi/owlapi-api -->
+        <dependency>
+            <groupId>net.sourceforge.owlapi</groupId>
+            <artifactId>owlapi-api</artifactId>
+            <version>5.1.12</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/net.sourceforge.owlapi/owlapi-distribution -->
+        <dependency>
+            <groupId>net.sourceforge.owlapi</groupId>
+            <artifactId>owlapi-distribution</artifactId>
+            <version>5.1.12</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/net.sourceforge.owlapi/org.semanticweb.hermit -->
+        <!--
+        <dependency>
+            <groupId>net.sourceforge.owlapi</groupId>
+            <artifactId>org.semanticweb.hermit</artifactId>
+            <version>1.4.3.517</version>
+        </dependency>
+        -->
+
+        <!-- https://mvnrepository.com/artifact/edu.stanford.swrl/swrlapi -->
+        <dependency>
+            <groupId>edu.stanford.swrl</groupId>
+            <artifactId>swrlapi</artifactId>
+            <version>2.0.6</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/edu.stanford.swrl/swrlapi-drools-engine -->
+        <dependency>
+            <groupId>edu.stanford.swrl</groupId>
+            <artifactId>swrlapi-drools-engine</artifactId>
+            <version>2.0.6</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/edu.stanford.swrl/swrltab -->
+        <dependency>
+            <groupId>edu.stanford.swrl</groupId>
+            <artifactId>swrltab</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.github.galigator.openllet/openllet-core -->
+        <dependency>
+            <groupId>com.github.galigator.openllet</groupId>
+            <artifactId>openllet-core</artifactId>
+            <version>2.6.5</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.github.galigator.openllet/openllet-owlapi -->
+        <dependency>
+            <groupId>com.github.galigator.openllet</groupId>
+            <artifactId>openllet-owlapi</artifactId>
+            <version>2.6.5</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/com.github.ansell.pellet/pellet-core -->
+        <!--
+        <dependency>
+            <groupId>com.github.ansell.pellet</groupId>
+            <artifactId>pellet-core</artifactId>
+            <version>2.3.3</version>
+        </dependency>
+        -->
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+    </dependencies>
+
+</project>
