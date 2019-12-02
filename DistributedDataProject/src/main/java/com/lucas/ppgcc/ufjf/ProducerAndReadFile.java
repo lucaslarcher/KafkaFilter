@@ -1,4 +1,5 @@
-package com.lucas.udemy.kafka.stream;
+package com.lucas.ppgcc.ufjf;
+
 
 import org.apache.kafka.clients.producer.*;
 import org.apache.kafka.common.serialization.StringSerializer;

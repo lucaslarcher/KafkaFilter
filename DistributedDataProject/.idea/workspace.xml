@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="911b5104-a3d6-4e56-84d0-d72b1555034d" name="Default Changelist" comment="" />
+    <list default="true" id="2aee68cf-38dd-43d4-b7a5-2ad93e4a06a7" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,25 +22,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1ShPPQl36viGEyMN0R3TtuTifEe" />
+  <component name="ProjectId" id="1Tvnzd3yespM9hNlmec8zuLV0gu" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/ontology/aal_ontology" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.lucas.udemy.kafka.stream" />
-    </key>
-  </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="mvn test" />
-      <command value="mvn compile" />
-      <command value="mvn clean" />
-    </option>
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -54,13 +38,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ProducerAndReadFile">
-    <configuration name="KafkaStreamFilter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lucas.udemy.kafka.stream.KafkaStreamFilter" />
-      <module name="streamFilter" />
+  <component name="RunManager" selected="Application.ConsumerOntologyCloud">
+    <configuration name="ConsumerOntologyCloud" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lucas.ppgcc.ufjf.ConsumerOntologyCloud" />
+      <module name="DistributedDataProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lucas.udemy.kafka.stream.*" />
+          <option name="PATTERN" value="com.lucas.ppgcc.ufjf.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KafkaStreamFilter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lucas.ppgcc.ufjf.KafkaStreamFilter" />
+      <module name="DistributedDataProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lucas.ppgcc.ufjf.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -69,11 +66,11 @@
       </method>
     </configuration>
     <configuration name="ProducerAndReadFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lucas.udemy.kafka.stream.ProducerAndReadFile" />
-      <module name="streamFilter" />
+      <option name="MAIN_CLASS_NAME" value="com.lucas.ppgcc.ufjf.ProducerAndReadFile" />
+      <module name="DistributedDataProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lucas.udemy.kafka.stream.*" />
+          <option name="PATTERN" value="com.lucas.ppgcc.ufjf.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -81,25 +78,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReadFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lucas.udemy.kafka.stream.ReadFile" />
-      <module name="streamFilter" />
+    <configuration name="ontologyFunctions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lucas.ppgcc.ufjf.ontologyFunctions" />
+      <module name="DistributedDataProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lucas.udemy.kafka.stream.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SaveOnMongoDB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lucas.udemy.kafka.stream.SaveOnMongoDB" />
-      <module name="streamFilter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.lucas.udemy.kafka.stream.*" />
+          <option name="PATTERN" value="com.lucas.ppgcc.ufjf.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -109,10 +93,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ConsumerOntologyCloud" />
         <item itemvalue="Application.KafkaStreamFilter" />
         <item itemvalue="Application.ProducerAndReadFile" />
-        <item itemvalue="Application.SaveOnMongoDB" />
-        <item itemvalue="Application.ReadFile" />
+        <item itemvalue="Application.ontologyFunctions" />
       </list>
     </recent_temporary>
   </component>
@@ -121,11 +105,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="911b5104-a3d6-4e56-84d0-d72b1555034d" name="Default Changelist" comment="" />
-      <created>1572012830691</created>
+      <changelist id="2aee68cf-38dd-43d4-b7a5-2ad93e4a06a7" name="Default Changelist" comment="" />
+      <created>1574349699807</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1572012830691</updated>
+      <updated>1574349699807</updated>
     </task>
     <servers />
   </component>
@@ -133,8 +117,8 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/lucas/udemy/kafka/stream/SaveOnMongoDB.java</url>
-          <line>10</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/lucas/ppgcc/ufjf/ontologyFunctions.java</url>
+          <line>91</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

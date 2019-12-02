@@ -1,4 +1,4 @@
-package com.lucas.owlapi.ontology;
+package com.lucas.ppgcc.ufjf;
 
 import com.google.common.collect.Multimap;
 import org.semanticweb.owlapi.apibinding.OWLManager;
@@ -31,17 +31,22 @@ import static junit.framework.Assert.assertNotNull;
 
 public class ontologyFunctions {
 
-    private static OWLOntologyManager manager;
-    private static OWLOntology ontology;
-    private static IRI iri;
-    private static OWLDataFactory dataFactory;
+    public static OWLOntologyManager manager;
+    public static OWLOntology ontology;
+    public static IRI iri;
+    public static OWLDataFactory dataFactory;
     //private static OWLReasonerFactory reasonerFactory;
     //private static OWLReasoner reasoner;
-    private static OpenlletReasonerFactory openlletReasonerFactory;
-    private static OpenlletReasoner openlletReasoner;
-    private static PrefixManager prefixManager;
-    private static PrefixDocumentFormat prefixDocumentFormat;
-    private static OWLObjectRenderer renderer;
+    public static OpenlletReasonerFactory openlletReasonerFactory;
+    public static OpenlletReasoner openlletReasoner;
+    public static PrefixManager prefixManager;
+    public static PrefixDocumentFormat prefixDocumentFormat;
+    public static OWLObjectRenderer renderer;
+
+
+    public ontologyFunctions(){
+
+    }
 
     public static void main(String[] args) {
         //~~*~~ Start ontology ~~*~~
@@ -99,11 +104,8 @@ public class ontologyFunctions {
             openlletReasoner.refresh();
             List<OWLLiteral> ls = getDataProperty("saveData", id);
             List<OWLLiteral> ls1 = getDataProperty("haveBPM", id);
-            if(ls.size()>0 && ls1.size()>0) {
-                System.out.println("save? " + ls.get(0).getLiteral() + "  BPM: " + ls1.get(0).getLiteral());
-
-
-            }
+            if(ls.size()>0 && ls1.size()>0)
+                System.out.println("save? "+ls.get(0).getLiteral()+"  BPM: "+ls1.get(0).getLiteral());
 
         }
 
@@ -122,6 +124,50 @@ public class ontologyFunctions {
         //System.out.println(ontology);
     }
 
+    public void runOntology(){
+        manager = OWLManager.createOWLOntologyManager();
+        dataFactory = manager.getOWLDataFactory();
+        renderer = new DLSyntaxObjectRenderer();
+        ontology = createOntology();
+        String pathIRI = "http://www.ontology.com/teste/teste.owl";
+        iri = IRI.create(pathIRI);
+        prefixManager = new DefaultPrefixManager(pathIRI+"#");
+        prefixDocumentFormat = manager.getOntologyFormat(ontology).asPrefixOWLDocumentFormat();
+        prefixDocumentFormat.setDefaultPrefix(pathIRI + "#");
+        ontology = loadOntologyFile("teste.owl");
+        openlletReasonerFactory = new OpenlletReasonerFactory();
+        openlletReasoner = openlletReasonerFactory.createReasoner(ontology, new SimpleConfiguration());
+
+        System.out.println(ontology);
+        List<OWLLiteral> literalList = getDataProperty("saveData", "Lucas");
+
+        openlletReasoner.precomputeInferences(InferenceType.CLASS_HIERARCHY);
+
+        Scanner scanner = new Scanner(System.in);
+        while(true){
+            String id = scanner.next();
+            String bpm = scanner.next();
+            System.out.println(id+" "+bpm);
+            OWLNamedIndividual individual = dataFactory.getOWLNamedIndividual(id,prefixManager);
+            OWLDataProperty dataProperty = dataFactory.getOWLDataProperty("haveBPM",prefixManager);
+            OWLDatatype datatypeString = dataFactory.getOWLDatatype(OWL2Datatype.XSD_STRING.getIRI());
+            OWLDatatype datatypeInt = dataFactory.getOWLDatatype(OWL2Datatype.XSD_INT.getIRI());
+            if(individual == null)
+                individual = createNamedIndividual(id);
+            ArrayList<OWLLiteral> list = getLiteralsDataPropiertyAndIndividual(dataProperty, individual);
+            if (list.size() > 0) {
+                removeLiteral(dataProperty, individual, list.get(0));
+            }
+            createLiteral(dataProperty,individual,bpm,datatypeInt);
+            openlletReasoner.prepareReasoner();
+            openlletReasoner.refresh();
+            List<OWLLiteral> ls = getDataProperty("saveData", id);
+            List<OWLLiteral> ls1 = getDataProperty("haveBPM", id);
+            if(ls.size()>0 && ls1.size()>0)
+                System.out.println("save? "+ls.get(0).getLiteral()+"  BPM: "+ls1.get(0).getLiteral());
+
+        }
+    }
 
 
 
